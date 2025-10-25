@@ -72,7 +72,7 @@ The plugin provides over **60 granular permissions** for different block propert
 | `debugstick.property.power`                           | Allows editing redstone power level                  | OP      |
 | `debugstick.property.half`                            | Allows editing top/bottom half (stairs, doors, etc.) | OP      |
 | `debugstick.property.open`                            | Allows toggling open/closed states                   | OP      |
-| *(...and many more — see `[plugin.yml](https://github.com/If-Master/DebugStick/blob/main/src/main/resources/plugin.yml)` for full list)* |                                                      |         |
+| *(...and many more — see [[plugin.yml]([url](https://github.com/If-Master/DebugStick/blob/main/src/main/resources/plugin.yml))] for full list)* |                                                      |         |
 
 ---
 
