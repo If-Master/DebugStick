@@ -1,0 +1,331 @@
+name: DebugStick
+version: '1.4.0'
+main: me.kanuunankuula.debugStick.DebugStick
+api-version: '1.21'
+description: Advanced debug stick plugin with granular permissions
+folia-supported: true
+author: Kanuunankuula [@If_Master]
+
+commands:
+  debugstick:
+    description: Gives the player a debug stick.
+    usage: /debugstick
+    permission: debugstick.use
+    aliases: [ ds, dstick ]
+
+  cds:
+    description: Shows all available commands for the Custom Debug Stick plugin.
+    usage: /cds
+    permission: debugstick.help
+
+default-permission: op
+
+permissions:
+  # Base permission
+  debugstick.viewfilter:
+    description: Just a way to view the filter type in game
+    default: OP
+
+  debugstick.use:
+    description: Allows for the usage of the debugstick
+    default: op
+
+  debugstick.command:
+    description: Allows for the usage of spawning in a debug stick
+    default: op
+
+  debugstick.help:
+    description: Allows viewing help menu
+    default: true
+
+  # Property permissions
+  debugstick.property.*:
+    description: Allows modifying all block properties
+    default: op
+    children:
+      debugstick.property.waterlogged: true
+      debugstick.property.facing: true
+      debugstick.property.axis: true
+      debugstick.property.open: true
+      debugstick.property.half: true
+      debugstick.property.rotation: true
+      debugstick.property.lit: true
+      debugstick.property.age: true
+      debugstick.property.level: true
+      debugstick.property.attached: true
+      debugstick.property.bottom: true
+      debugstick.property.conditional: true
+      debugstick.property.disarmed: true
+      debugstick.property.drag: true
+      debugstick.property.enabled: true
+      debugstick.property.extended: true
+      debugstick.property.eye: true
+      debugstick.property.falling: true
+      debugstick.property.hanging: true
+      debugstick.property.has_bottle: true
+      debugstick.property.has_record: true
+      debugstick.property.inverted: true
+      debugstick.property.in_wall: true
+      debugstick.property.occupied: true
+      debugstick.property.persistent: true
+      debugstick.property.short: true
+      debugstick.property.signal_fire: true
+      debugstick.property.snowy: true
+      debugstick.property.triggered: true
+      debugstick.property.unstable: true
+      debugstick.property.hinge: true
+      debugstick.property.shape: true
+      debugstick.property.type: true
+      debugstick.property.distance: true
+      debugstick.property.part: true
+      debugstick.property.attachment: true
+      debugstick.property.bites: true
+      debugstick.property.can_summon: true
+      debugstick.property.charges: true
+      debugstick.property.mode: true
+      debugstick.property.note: true
+      debugstick.property.pickles: true
+      debugstick.property.power: true
+      debugstick.property.slab_type: true
+      debugstick.property.stage: true
+      debugstick.property.up: true
+      debugstick.property.down: true
+      debugstick.property.north: true
+      debugstick.property.south: true
+      debugstick.property.east: true
+      debugstick.property.west: true
+      debugstick.property.variant: true
+      debugstick.property.eggs: true
+      debugstick.property.hatch: true
+      debugstick.property.delay: true
+      debugstick.property.instrument: true
+      debugstick.property.shrieking: true
+      debugstick.property.moisture: true
+      debugstick.property.face: true
+
+  debugstick.property.waterlogged:
+    description: Allows modifying waterlogged property
+    default: op
+
+  debugstick.property.facing:
+    description: Allows modifying facing property
+    default: op
+
+  debugstick.property.axis:
+    description: Allows modifying axis property
+    default: op
+
+  debugstick.property.open:
+    description: Allows modifying open property
+    default: op
+
+  debugstick.property.powered:
+    description: Allows modifying powered property
+    default: op
+
+  debugstick.property.half:
+    description: Allows modifying half property
+    default: op
+
+  debugstick.property.rotation:
+    description: Allows modifying rotation property
+    default: op
+
+  debugstick.property.lit:
+    description: Allows modifying lit property
+    default: op
+
+  debugstick.property.age:
+    description: Allows modifying age property
+    default: op
+
+  debugstick.property.level:
+    description: Allows modifying level property
+    default: op
+
+  debugstick.property.attached:
+    description: Allows modifying attached property
+    default: op
+
+  debugstick.property.bottom:
+    description: Allows modifying bottom property
+    default: op
+
+  debugstick.property.conditional:
+    description: Allows modifying conditional property
+    default: op
+
+  debugstick.property.disarmed:
+    description: Allows modifying disarmed property
+    default: op
+
+  debugstick.property.extended:
+    description: Allows modifying extended property
+    default: op
+
+  debugstick.property.eye:
+    description: Allows modifying eye property
+    default: op
+
+  debugstick.property.hanging:
+    description: Allows modifying hanging property
+    default: op
+
+  debugstick.property.has_bottle:
+    description: Allows modifying has_bottle property
+    default: op
+
+  debugstick.property.has_record:
+    description: Allows modifying has_record property
+    default: op
+
+  debugstick.property.inverted:
+    description: Allows modifying inverted property
+    default: op
+
+  debugstick.property.in_wall:
+    description: Allows modifying in_wall property
+    default: op
+
+  debugstick.property.occupied:
+    description: Allows modifying occupied property
+    default: op
+
+  debugstick.property.persistent:
+    description: Allows modifying persistent property
+    default: op
+
+  debugstick.property.signal_fire:
+    description: Allows modifying signal_fire property
+    default: op
+
+  debugstick.property.snowy:
+    description: Allows modifying snowy property
+    default: op
+
+  debugstick.property.unstable:
+    description: Allows modifying unstable property
+    default: op
+
+  debugstick.property.hinge:
+    description: Allows modifying hinge property
+    default: op
+
+  debugstick.property.shape:
+    description: Allows modifying shape property (rails and stairs)
+    default: op
+
+  debugstick.property.type:
+    description: Allows modifying type property
+    default: op
+
+  debugstick.property.distance:
+    description: Allows modifying distance property
+    default: op
+
+  debugstick.property.part:
+    description: Allows modifying part property
+    default: op
+
+  debugstick.property.attachment:
+    description: Allows modifying attachment property
+    default: op
+
+  debugstick.property.bites:
+    description: Allows modifying bites property
+    default: op
+
+  debugstick.property.can_summon:
+    description: Allows modifying can_summon property
+    default: op
+
+  debugstick.property.charges:
+    description: Allows modifying charges property
+    default: op
+
+  debugstick.property.mode:
+    description: Allows modifying mode property
+    default: op
+
+  debugstick.property.note:
+    description: Allows modifying note property
+    default: op
+
+  debugstick.property.pickles:
+    description: Allows modifying pickles property
+    default: op
+
+  debugstick.property.power:
+    description: Allows modifying power property
+    default: op
+    children:
+      debugstick.property.powered: true
+
+
+  debugstick.property.slab_type:
+    description: Allows modifying slab_type property
+    default: op
+
+  debugstick.property.stage:
+    description: Allows modifying stage property
+    default: op
+
+  debugstick.property.up:
+    description: Allows modifying up connection
+    default: op
+
+  debugstick.property.down:
+    description: Allows modifying down connection
+    default: op
+
+  debugstick.property.north:
+    description: Allows modifying north connection
+    default: op
+
+  debugstick.property.south:
+    description: Allows modifying south connection
+    default: op
+
+  debugstick.property.east:
+    description: Allows modifying east connection
+    default: op
+
+  debugstick.property.west:
+    description: Allows modifying west connection
+    default: op
+
+  debugstick.property.variant:
+    description: Allows modifying variant property
+    default: op
+
+  debugstick.property.eggs:
+    description: Allows modifying eggs property
+    default: op
+
+  debugstick.property.hatch:
+    description: Allows modifying hatch property
+    default: op
+
+  debugstick.property.delay:
+    description: Allows modifying delay property
+    default: op
+
+  debugstick.property.drag:
+    description: Allows modifying drag property
+    default: op
+
+  debugstick.property.shrieking:
+    description: Allows modifying sculk sensor phase/shrieking property
+    default: op
+
+  debugstick.property.moisture:
+    description: Allows modifying farmland moisture property
+    default: op
+
+  debugstick.property.face:
+    description: Allows modifying button/lever face property
+    default: op
+
+  debugstick.reload:
+    description: Allows the reloading of the plugin
+    default: op

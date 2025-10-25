@@ -1,0 +1,42 @@
+# Thank you for using this plugin!
+
+# ========================================
+# GENERAL SETTINGS
+# ========================================
+
+# Delete the debug stick when dropped by a player
+Delete-Dropped: true
+
+# ========================================
+# BLOCK FILTERING
+# ========================================
+
+# Filter mode: "BLACKLIST", "WHITELIST", or "NONE"
+# - BLACKLIST: Allow all blocks EXCEPT those in the blacklist
+# - WHITELIST: Allow ONLY blocks in the whitelist
+# - NONE: Allow all blocks (no filtering)
+Filter-Mode: "NONE"
+
+# Blacklist: Blocks that CANNOT be modified with debug stick
+# Only used when Filter-Mode is set to "BLACKLIST"
+Blacklisted-Blocks:
+#  - "CHEST"
+
+# Whitelist: Blocks that CAN be modified with debug stick
+# Only used when Filter-Mode is set to "WHITELIST"
+Whitelisted-Blocks:
+#  - "OAK_STAIRS"
+#  - "STONE_STAIRS"
+
+Blocked-Block-Message: "§cYou cannot modify this block with the debug stick!"
+
+# ========================================
+# MESSAGES
+# ========================================
+
+# Enable/disable various messages
+Messages:
+  # Show message when player receives debug stick
+  Debug-Stick-Given: true
+  # Show message when debug stick is dropped
+  Debug-Stick-Dropped: true
