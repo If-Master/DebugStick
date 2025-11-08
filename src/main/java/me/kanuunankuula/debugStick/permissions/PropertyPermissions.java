@@ -5,6 +5,7 @@ public class PropertyPermissions {
     public static final String BASE = "debugstick.property";
     public static final String USE = "debugstick.use";
 
+    // Basic properties
     public static final String WATERLOGGED = BASE + ".waterlogged";
     public static final String FACING = BASE + ".facing";
     public static final String AXIS = BASE + ".axis";
@@ -16,6 +17,7 @@ public class PropertyPermissions {
     public static final String AGE = BASE + ".age";
     public static final String LEVEL = BASE + ".level";
 
+    // Boolean properties
     public static final String ATTACHED = BASE + ".attached";
     public static final String BOTTOM = BASE + ".bottom";
     public static final String CONDITIONAL = BASE + ".conditional";
@@ -38,6 +40,7 @@ public class PropertyPermissions {
     public static final String TRIGGERED = BASE + ".triggered";
     public static final String UNSTABLE = BASE + ".unstable";
 
+    // Complex properties
     public static final String HINGE = BASE + ".hinge";
     public static final String SHAPE = BASE + ".shape";
     public static final String TYPE = BASE + ".type";
@@ -46,6 +49,7 @@ public class PropertyPermissions {
     public static final String ATTACHMENT = BASE + ".attachment";
     public static final String BITES = BASE + ".bites";
     public static final String CAN_SUMMON = BASE + ".can_summon";
+    public static final String HYDRATION = BASE + ".hydration";
     public static final String CHARGES = BASE + ".charges";
     public static final String MODE = BASE + ".mode";
     public static final String NOTE = BASE + ".note";
@@ -59,6 +63,7 @@ public class PropertyPermissions {
     public static final String DELAY = BASE + ".delay";
     public static final String INSTRUMENT = BASE + ".instrument";
 
+    // Directional properties
     public static final String UP = BASE + ".up";
     public static final String DOWN = BASE + ".down";
     public static final String NORTH = BASE + ".north";
@@ -66,9 +71,30 @@ public class PropertyPermissions {
     public static final String EAST = BASE + ".east";
     public static final String WEST = BASE + ".west";
 
+    // New 1.21+ properties
     public static final String SHRIEKING = BASE + ".shrieking";
     public static final String MOISTURE = BASE + ".moisture";
     public static final String FACE = BASE + ".face";
+    public static final String CANDLES = BASE + ".candles";
+    public static final String SCULK_SENSOR_PHASE = BASE + ".sculk_sensor_phase";
+    public static final String DUSTED = BASE + ".dusted";
+    public static final String CRACKED = BASE + ".cracked";
+    public static final String THICKNESS = BASE + ".thickness";
+    public static final String VERTICAL_DIRECTION = BASE + ".vertical_direction";
+    public static final String CRAFTING = BASE + ".crafting";
+    public static final String ORIENTATION = BASE + ".orientation";
+    public static final String TRIAL_SPAWNER_STATE = BASE + ".trial_spawner_state";
+    public static final String VAULT_STATE = BASE + ".vault_state";
+    public static final String OMINOUS = BASE + ".ominous";
+    public static final String TILT = BASE + ".tilt";
+    public static final String FLOWER_AMOUNT = BASE + ".flower_amount";
+    public static final String LAYERS = BASE + ".layers";
+    public static final String BERRIES = BASE + ".berries";
+    public static final String BLOOM = BASE + ".bloom";
+    public static final String BOOKS_STORED = BASE + ".books_stored";
+    public static final String HAS_BOOK = BASE + ".has_book";
+    public static final String LEAVES = BASE + ".leaves";
+    public static final String HONEY_LEVEL = BASE + ".honey_level";
 
     private PropertyPermissions() {
     }

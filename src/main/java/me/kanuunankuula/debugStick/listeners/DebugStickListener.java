@@ -1,10 +1,7 @@
 package me.kanuunankuula.debugStick.listeners;
 
 import me.kanuunankuula.debugStick.DebugStick;
-import me.kanuunankuula.debugStick.listeners.properties.BasicBlockListener;
-import me.kanuunankuula.debugStick.listeners.properties.RedstoneListener;
-import me.kanuunankuula.debugStick.listeners.properties.SpecificBlockListener;
-import me.kanuunankuula.debugStick.listeners.properties.ExtendedPropertiesListener;
+import me.kanuunankuula.debugStick.listeners.properties.*;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
@@ -22,6 +19,10 @@ public class DebugStickListener implements Listener {
     private final RedstoneListener redstoneListener;
     private final SpecificBlockListener specificBlockListener;
     private final ExtendedPropertiesListener extendedPropertiesListener;
+    private final ModernBlockListener modernBlockListener;
+    private final ComprehensiveBlockListener comprehensiveBlockListener;
+    private final WallListener wallListener;
+    private final BrushableBlockListener brushableBlockListener;
 
     public DebugStickListener(DebugStick plugin) {
         this.plugin = plugin;
@@ -29,6 +30,10 @@ public class DebugStickListener implements Listener {
         this.redstoneListener = new RedstoneListener(plugin);
         this.specificBlockListener = new SpecificBlockListener(plugin);
         this.extendedPropertiesListener = new ExtendedPropertiesListener(plugin);
+        this.modernBlockListener = new ModernBlockListener(plugin);
+        this.comprehensiveBlockListener = new ComprehensiveBlockListener(plugin);
+        this.wallListener = new WallListener(plugin);
+        this.brushableBlockListener = new BrushableBlockListener(plugin);
     }
 
     @EventHandler
@@ -43,6 +48,7 @@ public class DebugStickListener implements Listener {
                 block == null) {
             return;
         }
+
         if (!plugin.getConfigManager().isBlockAllowed(block.getType())) {
             event.setCancelled(true);
             player.sendMessage(plugin.getConfigManager().getBlockedBlockMessage());
@@ -53,6 +59,10 @@ public class DebugStickListener implements Listener {
         redstoneListener.checkRedstoneProperties(player, block);
         specificBlockListener.checkSpecificBlockProperties(player, block);
         extendedPropertiesListener.checkExtendedProperties(player, block);
+        modernBlockListener.checkModernBlockProperties(player, block);
+        comprehensiveBlockListener.checkComprehensiveProperties(player, block);
+        wallListener.checkWallProperties(player, block);
+        brushableBlockListener.checkBrushableProperties(player, block);
     }
 
     @EventHandler
