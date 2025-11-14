@@ -23,6 +23,7 @@ public class DebugStickListener implements Listener {
     private final ComprehensiveBlockListener comprehensiveBlockListener;
     private final WallListener wallListener;
     private final BrushableBlockListener brushableBlockListener;
+    private final OtherProperties otherProperties;
 
     public DebugStickListener(DebugStick plugin) {
         this.plugin = plugin;
@@ -34,6 +35,8 @@ public class DebugStickListener implements Listener {
         this.comprehensiveBlockListener = new ComprehensiveBlockListener(plugin);
         this.wallListener = new WallListener(plugin);
         this.brushableBlockListener = new BrushableBlockListener(plugin);
+        this.otherProperties = new OtherProperties(plugin);
+
     }
 
     @EventHandler
@@ -63,6 +66,8 @@ public class DebugStickListener implements Listener {
         comprehensiveBlockListener.checkComprehensiveProperties(player, block);
         wallListener.checkWallProperties(player, block);
         brushableBlockListener.checkBrushableProperties(player, block);
+        otherProperties.checkMissingProperties(player, block);
+
     }
 
     @EventHandler

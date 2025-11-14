@@ -3,6 +3,7 @@ package me.kanuunankuula.debugStick.listeners.properties;
 import me.kanuunankuula.debugStick.DebugStick;
 import me.kanuunankuula.debugStick.permissions.PropertyPermissions;
 import me.kanuunankuula.debugStick.util.SchedulerUtil;
+import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.data.*;
 import org.bukkit.entity.Player;
@@ -174,9 +175,13 @@ public class BasicBlockListener {
             if (updatedBlock.getBlockData() instanceof Ageable) {
                 Ageable after = (Ageable) updatedBlock.getBlockData();
 
-                if (beforeClone.getAge() != after.getAge() &&
+                int beforeAge = beforeClone.getAge();
+                int afterAge = after.getAge();
+
+
+                if (beforeAge != afterAge &&
                         !player.hasPermission(PropertyPermissions.AGE)) {
-                    after.setAge(beforeClone.getAge());
+                    after.setAge(beforeAge);
                     updatedBlock.setBlockData(after);
                     player.sendMessage("§cYou don't have permission to change block age.");
                 }

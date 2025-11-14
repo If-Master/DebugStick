@@ -1,5 +1,5 @@
 name: DebugStick
-version: '1.4.0'
+version: '1.4.2'
 main: me.kanuunankuula.debugStick.DebugStick
 api-version: '1.21'
 description: Advanced debug stick plugin with granular permissions
@@ -33,7 +33,6 @@ permissions:
   debugstick.command:
     description: Allows for the usage of spawning in a debug stick
     default: op
-
   debugstick.help:
     description: Allows viewing help menu
     default: true
@@ -51,6 +50,8 @@ permissions:
       debugstick.property.rotation: true
       debugstick.property.lit: true
       debugstick.property.age: true
+      debugstick.property.candles: true
+      debugstick.property.sculk_sensor_phase: true
       debugstick.property.level: true
       debugstick.property.attached: true
       debugstick.property.bottom: true
@@ -71,6 +72,8 @@ permissions:
       debugstick.property.short: true
       debugstick.property.signal_fire: true
       debugstick.property.snowy: true
+      debugstick.property.honey_level: true
+      debugstick.property.ominous: true
       debugstick.property.triggered: true
       debugstick.property.unstable: true
       debugstick.property.hinge: true
@@ -92,6 +95,7 @@ permissions:
       debugstick.property.down: true
       debugstick.property.north: true
       debugstick.property.south: true
+      debugstick.property.dusted: true
       debugstick.property.east: true
       debugstick.property.west: true
       debugstick.property.variant: true
@@ -102,6 +106,13 @@ permissions:
       debugstick.property.shrieking: true
       debugstick.property.moisture: true
       debugstick.property.face: true
+      debugstick.property.hydration: true
+      debugstick.property.natural: true
+      debugstick.property.creaking: true
+      debugstick.property.segment_amount: true
+      debugstick.property.leaves: true
+      debugstick.property.bloom: true
+
 
   debugstick.property.waterlogged:
     description: Allows modifying waterlogged property
@@ -110,6 +121,22 @@ permissions:
   debugstick.property.facing:
     description: Allows modifying facing property
     default: op
+  debugstick.property.honey_level:
+    description: Allows modifying Honey level property
+    default: op
+  debugstick.property.candles:
+    description: Allows modifying candle amount property
+    default: op
+  debugstick.property.sculk_sensor_phase:
+    description: Allows modifying sculk phase property
+    default: op
+  debugstick.property.ominous:
+    description: Allows modifying ominous property
+    default: op
+  debugstick.property.flower_amount:
+    description: Allows modifying flower_amount property
+    default: op
+
 
   debugstick.property.axis:
     description: Allows modifying axis property
@@ -133,6 +160,9 @@ permissions:
 
   debugstick.property.lit:
     description: Allows modifying lit property
+    default: op
+  debugstick.property.dusted:
+    description: Allows modifying of the dusted property
     default: op
 
   debugstick.property.age:
@@ -266,6 +296,8 @@ permissions:
     description: Allows modifying slab_type property
     default: op
 
+
+
   debugstick.property.stage:
     description: Allows modifying stage property
     default: op
@@ -324,6 +356,38 @@ permissions:
 
   debugstick.property.face:
     description: Allows modifying button/lever face property
+    default: op
+  debugstick.property.hydration:
+    description: Allows modifying hydration property
+    default: op
+  # Add these to the permissions section in plugin.yml
+
+  debugstick.property.natural:
+    description: Allows modifying natural property
+    default: op
+
+  debugstick.property.creaking:
+    description: Allows modifying creaking heart state property
+    default: op
+
+  debugstick.property.segment_amount:
+    description: Allows modifying segment amount property
+    default: op
+
+  debugstick.property.short:
+    description: Allows modifying short property
+    default: op
+
+  debugstick.property.falling:
+    description: Allows modifying falling property
+    default: op
+
+  debugstick.property.leaves:
+    description: Allows modifying leaves property
+    default: op
+
+  debugstick.property.bloom:
+    description: Allows modifying bloom property
     default: op
 
   debugstick.reload:

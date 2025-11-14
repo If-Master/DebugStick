@@ -11,10 +11,6 @@ import org.bukkit.entity.Player;
 
 import java.lang.reflect.Method;
 
-/**
- * Listener for additional comprehensive block properties
- * Handles all remaining modifiable block states
- */
 public class ComprehensiveBlockListener {
 
     private final DebugStick plugin;

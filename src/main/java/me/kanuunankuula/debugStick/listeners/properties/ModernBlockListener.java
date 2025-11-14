@@ -3,6 +3,7 @@ package me.kanuunankuula.debugStick.listeners.properties;
 import me.kanuunankuula.debugStick.DebugStick;
 import me.kanuunankuula.debugStick.permissions.PropertyPermissions;
 import me.kanuunankuula.debugStick.util.SchedulerUtil;
+import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.data.BlockData;
 import org.bukkit.block.data.type.*;
@@ -36,7 +37,6 @@ public class ModernBlockListener {
         checkBeehivePermission(player, block, blockData);
         checkSnowPermission(player, block, blockData);
         checkSweetBerryBushPermission(player, block, blockData);
-        checkCaveVinesPermission(player, block, blockData);
         checkChiseledBookshelfPermission(player, block, blockData);
         checkLecternPermission(player, block, blockData);
         checkMangrovePermission(player, block, blockData);
@@ -507,26 +507,6 @@ public class ModernBlockListener {
             }, 1L);
         } catch (ClassNotFoundException e) {
         }
-    }
-
-    @SuppressWarnings("deprecation")
-    private void checkCaveVinesPermission(Player player, Block block, BlockData blockData) {
-        if (!(blockData instanceof CaveVines)) return;
-
-        CaveVines beforeClone = (CaveVines) blockData.clone();
-        SchedulerUtil.runDelayed(plugin, block.getLocation(), () -> {
-            Block updatedBlock = block.getLocation().getBlock();
-            if (updatedBlock.getBlockData() instanceof CaveVines) {
-                CaveVines after = (CaveVines) updatedBlock.getBlockData();
-
-                if (beforeClone.isBerries() != after.isBerries() &&
-                        !player.hasPermission(PropertyPermissions.BERRIES)) {
-                    after.setBerries(beforeClone.isBerries());
-                    updatedBlock.setBlockData(after);
-                    player.sendMessage("§cYou don't have permission to change cave vines berries.");
-                }
-            }
-        }, 1L);
     }
 
     private void checkChiseledBookshelfPermission(Player player, Block block, BlockData blockData) {

@@ -15,12 +15,13 @@ Delete-Dropped: true
 # - BLACKLIST: Allow all blocks EXCEPT those in the blacklist
 # - WHITELIST: Allow ONLY blocks in the whitelist
 # - NONE: Allow all blocks (no filtering)
-Filter-Mode: "NONE"
+Filter-Mode: "BLACKLIST"
 
 # Blacklist: Blocks that CANNOT be modified with debug stick
 # Only used when Filter-Mode is set to "BLACKLIST"
 Blacklisted-Blocks:
 #  - "CHEST"
+  - "WILDFLOWERS"
 
 # Whitelist: Blocks that CAN be modified with debug stick
 # Only used when Filter-Mode is set to "WHITELIST"
